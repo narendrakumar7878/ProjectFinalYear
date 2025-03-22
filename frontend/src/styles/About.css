@@ -1,0 +1,158 @@
+/* Background Styling */
+.about-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Home Button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #1976d2;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+}
+
+/* Member Section */
+.member-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation on Scroll */
+.member-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternate Alignment */
+.member-section.left-image {
+    flex-direction: row;
+}
+
+.member-section.right-image {
+    flex-direction: row-reverse;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Image Animation on Scroll */
+.member-section.show .member-image {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icons .MuiIconButton-root {
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .MuiIconButton-root:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content-section {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Content Animation on Scroll */
+.member-section.show .content-section {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Name Styling */
+.member-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+/* Description Styling */
+.member-description {
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member-section {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .content-section {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .member-name {
+        font-size: 22px;
+    }
+
+    .member-description {
+        font-size: 16px;
+    }
+}
