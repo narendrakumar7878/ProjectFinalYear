@@ -81,32 +81,7 @@ export default function Authentication() {
             .catch((error) => console.error("Image fetch error:", error));
     }, []);
 
-   //timing set of image change 
-    // const fetchImage = () => {
-    //     axios
-    //         .get("https://api.unsplash.com/photos/random", {
-    //             headers: {
-    //                 Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
-    //             },
-    //             params: {
-    //                 query: "wallpapers",
-    //                 w: 800,
-    //                 h: 600,
-    //             },
-    //         })
-    //         .then((response) => setImageUrl(response.data.urls.regular))
-    //         .catch((error) => console.error("Image fetch error:", error));
-    // };
 
-    // useEffect(() => {
-    //     fetchImage(); // Pehli baar image fetch karne ke liye
-
-    //     const interval = setInterval(() => {
-    //         fetchImage(); // Har 5 second me new image fetch karega
-    //     }, 9000);
-
-    //     return () => clearInterval(interval); // Cleanup to prevent memory leak
-    // }, []);
 
 
     return (
