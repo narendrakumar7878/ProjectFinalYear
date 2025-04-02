@@ -12,17 +12,23 @@ import MicOffIcon from '@mui/icons-material/MicOff'
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import ChatIcon from '@mui/icons-material/Chat'
-import server from '../environment';
 
-const server_url = server;
+//here is changes for deployment
+//import server from '../environment';
+//const server_url = server;
+//
+
+// const peerConfigConnections = {
+//   "iceServers": [
+//     { "urls": "stun:stun.l.google.com:19302" }
+//   ]
+// }
+
+// localhost program run changes
+
+const server_url = "http://localhost:8000";
 
 var connections = {};
-
-const peerConfigConnections = {
-  "iceServers": [
-    { "urls": "stun:stun.l.google.com:19302" }
-  ]
-}
 
 export default function VideoMeetComponent() {
 

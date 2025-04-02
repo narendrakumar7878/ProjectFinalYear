@@ -3,13 +3,19 @@ import axios from "axios";
 import httpStatus from "http-status";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import server from "../environment";
-
 export const AuthContext = createContext({});
+//deploy file
+//import server from "../environment";
+//here changes for deploy and not
 
+// const client = axios.create({
+//   baseURL: `${server}/api/v1/users`,
+// });
+
+//localhost changes
 const client = axios.create({
-  baseURL: `${server}/api/v1/users`,
-});
+  baseURL: "http://localhost:8000/api/v1/users",
+})
 
 // Adding token to request headers
 client.interceptors.request.use((config) => {
